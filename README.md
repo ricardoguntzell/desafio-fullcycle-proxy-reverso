@@ -16,3 +16,10 @@ O retorno da aplicação node.js para o nginx deverá ser:
 <img src="img/evidencia-mysql.png" alt="Full Cycle Rocks! mysql">
 
 Gere o docker-compose de uma forma que basta apenas rodarmos: docker-compose up -d que tudo deverá estar funcionando e disponível na porta: 8080.
+
+### ATENCAO ###
+- Baixe o repositorio git para sua maquina local.
+- Execute o comando:
+docker-compose up -d
+
+Abs!
