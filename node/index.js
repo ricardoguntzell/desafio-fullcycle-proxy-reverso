@@ -2,6 +2,12 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+//Prepara Estrutura HTML
+var  html="";
+html += "<hr>";
+html += "<h1>Full Cycle Rocks!</h1>";
+html += "<hr>";
+
 /**Config DB MyySQL*/
 const config = {
     host:'desafio-db',
@@ -20,12 +26,6 @@ const sqlSelect = "SELECT * FROM pessoas";
 
 //Faz o Insert no MyySQL
 connection.query(sqlInsert)
-
-//Prepara Estrutura HTML
-var  html="";
-html += "<hr>";
-html += "<h1>Full Cycle Rocks!</h1>";
-html += "<hr>";
 
 // Faz a listagem dos dados que estão no MyySQL
 connection.query(sqlSelect, (err, rows) => {

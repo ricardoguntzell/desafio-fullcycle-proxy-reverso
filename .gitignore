@@ -2,3 +2,5 @@
 /node/node_modules/
 /nginx/Dockerfile.dev
 /node/package-lock.json
+/node/index-dev.js
+
