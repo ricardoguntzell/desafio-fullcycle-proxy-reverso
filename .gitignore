@@ -1,1 +1,3 @@
 /nginx/Dockerfile.dev
+/node/node_modules 
+/node/package-lock.json
