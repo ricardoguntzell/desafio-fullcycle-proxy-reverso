@@ -10,8 +10,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 RUN npm install express --save && \
-    npm install mysql --save && \
-    npm install --production
+    npm install mysql --save 
 
 COPY . .
 
