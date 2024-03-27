@@ -24,6 +24,8 @@ services:
     entrypoint: dockerize -wait tcp://desafio-db:3306 -timeout 40s docker-entrypoint.sh
     networks:
       - desafio-network
+    volumes:
+      - ./node:/usr/src/app
     tty: true
     ports:
       - "3000:3000"
