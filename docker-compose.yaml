@@ -17,21 +17,20 @@ services:
 
   desafio-node:
     build:
-      context: ./node
+      context: node
       dockerfile: Dockerfile
     image: guntzbr/desafio-node
     container_name: desafio-node
-    entrypoint: dockerize -wait tcp://desafio-db:3306 -timeout 40s docker-entrypoint.sh
+    entrypoint: sh -c "npm install && npm run dev" dockerize -wait tcp://desafio-db:3306 -timeout 40s docker-entrypoint.sh
     networks:
       - desafio-network
-#    volumes:
-#      - ./node:/usr/src/app
+    volumes:
+      - ./node:/usr/src/app
     tty: true
     ports:
       - "3000:3000"
     depends_on:
       - desafio-db
-    command: node index.js  
 
   desafio-db:
     image: mysql:5.7
