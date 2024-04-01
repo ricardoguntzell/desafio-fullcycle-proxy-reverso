@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     image: guntzbr/desafio-node
     container_name: desafio-node
-    entrypoint: sh -c "npm install && npm run dev" dockerize -wait tcp://desafio-db:3306 -timeout 40s docker-entrypoint.sh
+    entrypoint: dockerize -wait tcp://desafio-db:3306 -timeout 40s docker-entrypoint.sh sh -c "npm install && npm run dev" 
     networks:
       - desafio-network
     volumes:
